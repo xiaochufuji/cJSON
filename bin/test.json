@@ -1,0 +1,16 @@
+{
+    "test": 123,
+    "key value": [
+        "01string",
+        "02string",
+        123.456,
+        {
+            "array object": "nice"
+        },
+        [
+            false,
+            null,
+            true
+        ]
+    ]
+}
