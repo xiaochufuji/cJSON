@@ -33,7 +33,7 @@ int main()
         removeNodeFromObjectByIndex(json, 0);
         print(json);
         /**************************************************************************************/
-        cJSON *d = detachNodeFromObjectByKey(json, "a key");
+        cJSON *d = detachNodeFromObjectByKey(json, "A key");
         if (!d) /* ensure d exits */
             goto HERE;
         print(d);

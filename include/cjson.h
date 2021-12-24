@@ -19,13 +19,22 @@
  *         4. char* data = dumpJson();      // you can dump the json from memory
  *         5. char* ep = getErrorPosition();// you can get the error position when parsing
  *
- *  tips:  if you use dumpJson(), you must manually release the string by yourself;
- *         if you dont want to get a format json string, you can change the Macro ISFORMAT to 0.
+ *  tips:  1. if you use dumpJson(), you must manually release the string by yourself;
+ *         2. if you dont want to get a format json string, you can change the Macro ISFORMAT to 0.
  *         ISFORMAT  1    <---->    FORMAT JSON OUTPUT
  *         ISFORMAT  0    <---->    WITHOUT FORMAT OUTPUT
- *
+ *         
+ *         3. if you want to distinguish uppercase and lowercase, you can change the macro 
+ *         ISCASESENSITIVE
+ *         ISCASESENSITIVE 1    <---->    key value "AAABBB" is different from "aaabbb"
+ *         ISCASESENSITIVE 0    <---->    key value "aaaBbB" is same to "AAAbbb"/"aaABbb"...
+ *     
+ *  There is hardly memory leak in the program because there no memory leak when I test it, 
+ *  so you can use safely!!!
+ * 
  ***************************************************************************************************/
 #define ISFORMAT 1
+#define ISCASESENSITIVE 0
 
 #define ifBadMalloc(ptr) \
     if (!ptr)            \

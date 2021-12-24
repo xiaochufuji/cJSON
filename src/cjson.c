@@ -874,7 +874,11 @@ int keyCmp(const char *s1, const char *s2)
     { /* invaild pointer */
         return 1;
     }
+#if ISCASESENSITIVE
+    while ((*s1) == (*s2))
+#else
     while (tolower(*s1) == tolower(*s2))
+#endif
     {
         ++s1;
         ++s2;
