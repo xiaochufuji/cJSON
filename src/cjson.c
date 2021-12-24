@@ -848,6 +848,7 @@ void addNode2Object(cJSON *nodeDst, cJSON *nodeSrc, const char *key)
 {
     if (!nodeDst || nodeDst->type != cJSON_OBJECT)
     {
+        perror("the dst node is not a object");
         return;
     }
     cJSON *locatedChild = nodeDst->child;
