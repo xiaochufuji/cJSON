@@ -10,6 +10,7 @@ so the command i use when cmake in build/ is
 `cmake -G "MinGW Makefiles" ..`
 the command i use when makefile in build/ is 
 `mingw32-make`
+and run the program '../bin/main' if you are in the directory build/
 ```
 
 
