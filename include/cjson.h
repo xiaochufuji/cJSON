@@ -98,10 +98,6 @@ typedef struct cJSON
     cJSONType type;
 } cJSON;
 
-static cJSON *cjsonList[1024];
-static size_t registedNode = 0;
-static const char *errorPoistion;
-
 /*******************************************************************************************************
  *  all function here
  *  include parse / print json format content

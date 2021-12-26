@@ -60,6 +60,7 @@ int main()
         replaceNode2ObjectByKey(json->child->child->next->next, d, "array object");
         print(json);
     }
+    printf("error position: %c\n", *getErrorPosition());
 HERE:
     exitSafe();
     fclose(fp);

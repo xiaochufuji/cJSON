@@ -1,5 +1,9 @@
 #include "../include/cjson.h"
 
+static cJSON *cjsonList[1024];
+static size_t registedNode = 0;
+static const char *errorPoistion;
+
 void exitSafe()
 {
     for (size_t i = 0; i < registedNode; ++i)
